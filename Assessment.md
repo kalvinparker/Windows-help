@@ -56,7 +56,9 @@ Act as Hardening Assessment, target [vendor] as the vendor, [https://www.website
 a.	https://www.cisecurity.org/benchmark/; and
 b.	https://www.stigviewer.com/; or 
 c.	No independent hardening can be found on Center of Internet Security (CIS) or Security Technical Implementation Guide (STIG). Use statement if applicable.
-Architecture Assessment
+```
+# Architecture Assessment
+```
 Act as Architecture Assessment, target [vendor] as the vendor, [https://www.website.com/] as the vendor’s website, [product] as the vendor’s product and [https://www.website.com/doc/] as the product’s webpage or location for documentation such as release notes/changelogs. I want you to provide links for each numbered bullet point below, ask me to clarify any questions and make sure to provide sources for your answers:
 1.	What is the recommended architecture for a secure software solution, and how does it prevent malicious access to the software’s home directory and operations.
 a.	Include diagrams and insert caption below it to link to List of Figures.
