@@ -26,3 +26,30 @@ IP forwarding is a network configuration setting that allows a device to act as 
   3. Set the value of the `IPEnableRouter` key to `0`.
 
 By following these recommendations, you can help mitigate the security risks associated with IP forwarding enabled devices.
+
+**Permission denied**
+
+The error message "Permission denied" indicates that you don't have the necessary permissions to write to the `/proc/sys/net/ipv4/ip_forward` file. This file controls whether your system acts as a router, forwarding packets between different networks.
+
+**To resolve this issue:**
+
+1. **Use `sudo`:** The most common way to gain root privileges is to use the `sudo` command. Try the following:
+
+   ```bash
+   sudo echo 0 > /proc/sys/net/ipv4/ip_forward
+   ```
+
+   You will be prompted for your password. If you have entered the correct password, the command should execute successfully.
+
+2. **Check your user permissions:** If you still encounter the error after using `sudo`, verify your user permissions. Ensure that your user account is part of the `sudo` group or has direct root privileges.
+
+3. **Check file permissions:** You can also check the permissions of the `/proc/sys/net/ipv4/ip_forward` file:
+
+   ```bash
+   ls -l /proc/sys/net/ipv4/ip_forward
+   ```
+
+   If the file permissions are too restrictive, you may need to modify them. However, this is generally not recommended for security reasons.
+
+**Remember:** Disabling IP forwarding can affect your network connectivity. If you're unsure about the implications of this change, consult your network administrator or consult online resources for more information.
+
