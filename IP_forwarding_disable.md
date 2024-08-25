@@ -101,4 +101,33 @@ The error message "Permission denied" indicates that you don't have the necessar
 
      However, disabling SELinux is not recommended in production environments. If you need to modify SELinux policies, consult your system administrator or refer to the SELinux documentation.
 
-If none of these steps resolve the issue, please provide more details about your system configuration, including the operating system, distribution, and any specific security measures you have in place. This will help me provide more tailored assistance.
+If the `pkexec` command is also failing with the "Permission denied" error. This suggests that there are deeper-level permissions or security mechanisms in place that are preventing you from modifying the `/proc/sys/net/ipv4/ip_forward` file.
+
+**Here are some additional steps to investigate:**
+
+1. **Check for AppArmor or other security modules:**
+
+   * Some Linux distributions use AppArmor or other security modules that can restrict access to certain files and operations. Check if these modules are active on your system and if they are restricting access to the `/proc/sys/net/ipv4/ip_forward` file.
+
+2. **Check for systemd-journald permissions:**
+
+   * Systemd-journald, the system journal service, can also restrict access to certain system files. Ensure that your user has the necessary permissions to write to the journal.
+
+3. **Review firewall rules:**
+
+   * If you have a firewall configured, check if it is blocking access to the `/proc/sys/net/ipv4/ip_forward` file.
+
+4. **Consult system logs:**
+
+   * Review the system logs (e.g., `/var/log/messages`, `/var/log/auth.log`) for any error messages related to permissions or security.
+
+5. **Seek expert assistance:**
+
+   * If you've exhausted all these options and are still unable to resolve the issue, it might be best to consult a system administrator or seek professional help. They can analyze your system's configuration and identify the root cause of the problem.
+
+**Additional tips:**
+
+* **Temporarily disable SELinux:** If you're using SELinux, you can temporarily disable it to see if that resolves the issue. However, this is not recommended in production environments.
+* **Try a different user account:** If you have another user account with administrative privileges, try using that account to see if you can modify the file.
+
+By following these steps and providing more details about your system configuration, I can hopefully assist you in resolving the permission issue.
