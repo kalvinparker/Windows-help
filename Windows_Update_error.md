@@ -1,6 +1,10 @@
-#### Source
+#### Workaround
 ```
 https://support.microsoft.com/en-gb/topic/-we-couldn-t-update-system-reserved-partition-error-installing-windows-10-46865f3f-37bb-4c51-c69f-07271b6672ac
+```
+#### Permanant solution
+```
+https://www.winhelponline.com/blog/resize-efi-system-partition/
 ```
 ### Note: I did this to update my Windows 10 installation to meet requirements before upgrading to Windows 11. Then again to update to Windows 11, version 24H2.
 
