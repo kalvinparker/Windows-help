@@ -2,7 +2,7 @@
 ```
 https://support.microsoft.com/en-gb/topic/-we-couldn-t-update-system-reserved-partition-error-installing-windows-10-46865f3f-37bb-4c51-c69f-07271b6672ac
 ```
-### Note: I did this to update my Windows 10 installations to meet requirements to upgrade to Windows 11. Then again to update to Windows 11, version 24H2.
+### Note: I did this to update my Windows 10 installation to meet requirements before upgrading to Windows 11. Then again to update to Windows 11, version 24H2.
 
 # Works with Windows 10 & 11 with GPT partitition:
 
